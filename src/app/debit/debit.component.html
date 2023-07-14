@@ -1,0 +1,33 @@
+<div class="cr-body">
+    <div class="cr-cont">
+        <div class="heading"><h2>Add Expense</h2></div>
+        <br><br>
+        <form #debitForm="ngForm" (ngSubmit)="AddDebitData(debitForm.value)" >
+
+        <input placeholder="detail" type="text" #debitDetail="ngModel" name="debitDetail" ngModel required>
+        <div *ngIf="debitDetail.touched">
+            <span class="errorspan" *ngIf="debitDetail.errors?.['required']" >Please enter detail</span>
+        </div>
+
+        <input placeholder="amount" type="number" #debitAmount="ngModel" name="debitAmount" ngModel required>
+        <div *ngIf="debitAmount.touched">
+            <span class="errorspan" *ngIf="debitAmount.errors?.['required']" >Please enter amount</span>
+        </div>
+
+        <input placeholder="date" type="date" #debitDate="ngModel" name="debitDate" ngModel required >
+        <div *ngIf="debitDate.touched">
+            <span class="errorspan" *ngIf="debitDate.errors?.['required']" >Please enter date</span>
+        </div>
+
+        <div class="submit-button">
+            <button routerLink="/home" class="back-btn" ><span class="material-symbols-outlined">
+                arrow_back_ios
+                </span></button>
+            <button class="sub-btn" type="submit" [disabled]="!debitForm.valid" >Submit</button>
+        </div>
+    </form>
+    <span>{{ msg }}</span>
+    </div>
+
+</div>
+

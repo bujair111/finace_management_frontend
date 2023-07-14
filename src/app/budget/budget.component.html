@@ -1,0 +1,35 @@
+<div class="cr-body">
+    <div class="cr-cont">
+        <div class="heading"><h2>Add Budget</h2></div>
+        <br><br>
+
+        <form #budgetForm="ngForm" (ngSubmit)="addBudget(budgetForm.value)" >
+
+        <input placeholder="Budget" #budget="ngModel" type="number" name="budget" ngModel required>
+        <div *ngIf="budget.touched">
+            <span class="errorspan" *ngIf="budget.errors?.['required']" >Please enter budget</span>
+        </div>
+
+        <input placeholder="month" #month="ngModel"  type="number" name="month" ngModel required>
+        <div *ngIf="month.touched">
+            <span class="errorspan" *ngIf="month.errors?.['required']" >Please enter month</span>
+        </div>
+
+        <input placeholder="year" #year="ngModel"  type="number" name="year" ngModel required>
+        <div *ngIf="year.touched">
+            <span class="errorspan" *ngIf="year.errors?.['required']" >Please enter year</span>
+        </div>
+
+        <div class="submit-button">
+            <button routerLink="/home" class="back-btn" ><span class="material-symbols-outlined">
+                arrow_back_ios
+                </span></button>
+            <button class="sub-btn" [disabled]="!budgetForm.valid"   type="submit" >Add</button>
+        </div>
+    </form>
+<span>{{ message }}</span>
+    </div>
+
+</div>
+
+

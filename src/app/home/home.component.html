@@ -1,0 +1,91 @@
+<div class="homeHed">
+    <div class="card">
+        <div class="cardtop">
+            <h3>Budget For this Month</h3>
+        </div>
+        <div class="cardbot">
+            <h1 style="color: rgb(43, 42, 42);">{{ budget }} $</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cardtop">
+            <h3>Income</h3>
+        </div>
+        <div class="cardbot">
+            <h1 style="color: green;">{{ totalIncome }} $</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cardtop">
+            <h3>
+                Expense
+            </h3>
+        </div>
+        <div class="cardbot">
+            <h1 style="color: red;">{{ totalExpense }} $</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cardtop">
+            <h3>
+                date
+            </h3>
+        </div>
+        <div class="cardbot">
+            <h1 style="color: rgb(10, 10, 10);">{{ formattedDate}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="tool">
+    <div class="tools-button">
+        <button routerLink="/budget" class="btn-a"> Add Budget</button>
+        <!-- <button routerLink="/summary" class="btn-b"> Summary</button> -->
+        
+    </div>
+    <div class="notification">
+        <div * class="not-1">Expense is > Budget !</div>
+        <div *ngIf="budgetIndicter" class="not-2">Add this month Budget</div>
+    </div>
+</div>
+
+<div class="list">
+    <div class="a"> 
+        <div class="heading"><h2>Expense List</h2></div>
+        <table class="expensetable">
+            
+            <tr>
+            <th>detail</th>
+            <th>amount</th>
+            <th>date</th>
+            </tr>
+
+            <tr *ngFor="let i of expenseDocument">
+            <td>{{ i.debitDetail }}</td>
+            <td>{{ i.debitAmount }} $</td>
+            <td>{{ i.debitDate }}</td>
+            </tr>
+
+        </table>
+        
+
+    </div>
+
+    <div class="b">
+        <div class="heading"><h2>Income List</h2></div>
+
+        <table class="expensetable">
+            <tr>
+                <th>detail</th>
+                <th>amount</th>
+                <th>date</th>
+            </tr>
+            <tr *ngFor="let income of incomeDocument">
+            <td>{{ income.creditDetail }} </td>
+            <td>{{ income.creditAmount }} $</td>
+            <td>{{ income.creditDate }}</td>
+            </tr>
+        </table>
+        
+    </div>
+</div>

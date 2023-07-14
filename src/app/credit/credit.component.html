@@ -1,0 +1,32 @@
+<div class="cr-body">
+    <div class="cr-cont">
+        <div class="heading"><h2>Add Income</h2></div>
+        <br><br>
+        <form #creditForm="ngForm" (ngSubmit)="addCreditData(creditForm.value)">
+
+        <input placeholder="detail" type="text" #creditDetail="ngModel" name="creditDetail" ngModel required>
+        <div *ngIf="creditDetail.touched">
+            <span class="errorspan" *ngIf="creditDetail.errors?.['required']" >Please enter detail</span>
+        </div>
+
+        <input placeholder="amount" type="number" #creditAmount="ngModel" name="creditAmount" ngModel required>
+        <div *ngIf="creditAmount.touched">
+            <span class="errorspan" *ngIf="creditAmount.errors?.['required']" >Please enter amount</span>
+        </div>
+
+        <input placeholder="date" type="date" #creditDate="ngModel" name="creditDate" ngModel required>
+        <div *ngIf="creditDate.touched">
+            <span class="errorspan" *ngIf="creditDate.errors?.['required']" >Please enter date</span>
+        </div>
+
+        <div class="submit-button">
+            <button routerLink="/home" class="back-btn" ><span class="material-symbols-outlined">
+                arrow_back_ios
+                </span></button>
+            <button class="sub-btn" [disabled]="!creditForm.valid"  type="submit" >Submit</button>
+        </div>
+    </form>
+    <span>{{ msg }}</span>
+    </div>
+
+</div>

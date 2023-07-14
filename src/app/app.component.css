@@ -1,0 +1,47 @@
+.head{
+    width: 100%;
+    height: 4rem;
+    background-color: hsl(210.83deg 99.22% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.head h1 {
+    margin-left: 20px;
+    color: white;
+}
+.buttons {
+    height: 4rem;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 10px;
+}
+.buttons div {
+    width: 65px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    /* color: white; */
+}
+.Credit{
+    background-color: green;
+    color: rgb(255, 255, 255);
+
+}
+.debit{
+    background-color: red;
+    color: rgb(255, 255, 255);
+
+}
+
+.buttons div:hover{
+    scale: 1.1;
+}

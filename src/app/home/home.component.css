@@ -1,0 +1,161 @@
+.homeHed{
+    width: 100%;
+    height: 9rem;
+    background-color:#f9fbfa;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    width: 230px;
+    height: 7rem;
+    border-radius: 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    box-shadow: 1px 2px 3px 2px rgb(187, 184, 184);
+
+}
+.cardtop{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #001e2b;
+    background-color:hsl(0, 0%, 100%);
+    border-bottom: 0.1px solid rgb(221, 217, 217);
+
+
+}
+.cardbot{
+    width: 100%;
+    height: 5rem;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardbot h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+
+.tool{
+    width: 100%;
+    height: 3rem;
+    margin-top: 5px;
+    display: flex;
+}
+.tool .tools-button{
+    width: 40%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+.tool .tools-button button{
+    width: 100px;
+    height: 2rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-left: 35px;
+    background-color: white;
+    font-weight: 600;
+    
+}
+.tool .tools-button button:hover{
+    scale: 1.04;
+}
+.btn-a{
+    color: green;
+}
+.btn-b{
+    color: #1b6a8d;
+}
+
+.tool .notification{
+    width: 60%;
+    height: 3rem;
+    display: flex;
+    overflow: hidden;
+}
+.notification div{
+    width: 50%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.not-1{
+    background-color: #b351514e;
+}
+.not-2{
+    background-color: antiquewhite;
+}
+
+
+
+.list{
+    margin-top: 10px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    
+}
+.a{
+    width: 50%;
+    /* background: #001e2b; */
+}
+.b{
+    width: 50%;
+    /* background: #2887b0; */
+}
+.heading{
+    width: 95%;
+    height: 2.5rem; 
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgb(96, 96, 96);
+
+}
+
+.heading h2 {
+    margin-left: 30px;
+
+}
+
+.expensetable{
+    width: 95%;
+    background-color: white;
+    box-shadow: 1px 2px 2px 2px rgb(187, 184, 184);
+    border-radius: 2px 0px 5px ;
+
+
+}
+.expensetable th {
+    height: 2rem;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgb(173, 171, 171);
+    color: rgb(0 30 43);
+
+}
+.expensetable td {
+    text-align: center;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 2rem;
+    color: rgb(61, 79, 88);
+
+
+} 
+.expensetable tr:hover{
+    background-color: hsl(211.76deg 100% 90%);
+}
